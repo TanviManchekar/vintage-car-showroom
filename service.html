@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Boxes with Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align items at the top */
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Light gray background */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* Allows items to wrap onto the next row */
+            gap: 20px; /* Space between boxes */
+            justify-content: center; /* Center items horizontally */
+        }
+
+        .box {
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 300px; /* Adjust width for all boxes */
+            width: 100%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .box h3 {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .box p {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .box button {
+            background-color: #fbea03;
+            color: #ffffff;
+            border: 2px solid #ffffff; /* White border */
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            margin: 10px; /* Space between buttons */
+            text-decoration: none; /* Remove underline */
+        }
+
+        .box button:hover {
+            background-color: #004d40;
+            border-color: #004d40; /* Darker border on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Top Row: First Three Boxes -->
+        <div class="box">
+            <img src="engine.jpg" alt="engine">
+            <h3>Engine</h3>
+            <a href="https://www.google.com/maps/@19.001042,72.8392484,15.88z?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                <button>Order Place</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <img src="battery.jpg" alt="Another Image">
+            <h3>Battery</h3>
+            <a href="https://example.com/page3" target="_blank">
+                <button>Order Place</button>
+            </a>
+        </div>
+
+        <div class="box">
+            <img src="tire.jpg" alt="Yet Another Image">
+            <h3>Tire</h3>
+            <a href="https://example.com/page5" target="_blank">
+                <button>Order Place</button>
+            </a>
+        </div>
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Car Showroom - Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            color: #333;
+            background-color: #fff;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .reviews-list .review {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #fafafa;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33.333% - 20px); /* Adjust width to fit three boxes per row with gap */
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .reviews-list .review:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .reviews-list .review img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .reviews-list .review h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .reviews-list .review .rating span {
+            color: #ffd700;
+            font-size: 20px;
+        }
+
+        .reviews-list .review p {
+            margin: 10px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <section id="review">
+        <h2>Reviews</h2>
+        <div class="container">
+            <div class="reviews-list">
+                <div class="review">
+                    <img src="1-review.jpg" alt="Reviewer Image">
+                    <h3>Jane Doe</h3>
+                    <div class="rating">
+                        <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
+                    </div>
+                    <p>This product is amazing! It exceeded my expectations.</p>
+                </div>
+                <div class="review">
+                    <img src="2-review.jpg" alt="Reviewer Image">
+                    <h3>John Smith</h3>
+                    <div class="rating">
+                        <span>&#9733; &#9733; &#9733; &#9733;</span>
+                    </div>
+                    <p>Good quality, but a bit expensive.</p>
+                </div>
+                <div class="review">
+                    <img src="3-review.jpg" alt="Reviewer Image">
+                    <h3>Celia Almeda</h3>
+                    <div class="rating">
+                        <span>&#9733; &#9733; &#9733; &#9733;</span>
+                    </div>
+                    <p>This product is amazing!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

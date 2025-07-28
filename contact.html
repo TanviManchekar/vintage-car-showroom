@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page with Map</title>
+    <style>
+        body {
+            z-index: 100;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            height: 80%;
+        }
+
+        .contact-box {
+            background-color: #ffffff;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 20px;
+            width: 50%;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-box:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-box h2 {
+            margin-top: 0;
+            color: #fff;
+            padding: 10px;
+            border: 2px solid #ffeb3b; /* Yellow border */
+            border-radius: 8px;
+            background-color: #fdf405; /* Light yellow background */
+        }
+
+        .contact-box form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-box label {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        .contact-box input, .contact-box textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-bottom: 7px;
+        }
+
+        .contact-box textarea {
+            resize: vertical;
+            height: 120px;
+        }
+
+        .contact-box button {
+            background-color: #fbea03;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+            border-radius: 4px;
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .contact-box button:hover {
+            background-color: #004d40;
+            border-color: #004d40;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .map-container {
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid #ddd;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease;
+        }
+
+        .map-container:hover {
+            transform: scale(1.1);
+        }
+
+        .map-container img {
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .map-container img:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="contact-box">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Contact Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="map-container">
+            <img src="live location.png" alt="Live Location" usemap="#locationmap">
+            <map name="locationmap">
+                <area shape="circle" coords="400,300,100" alt="Live Location" href="https://www.google.com/maps/@19.001042,72.8392484,15.88z?entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D">
+            </map>
+        </div>
+    </div>
+</body>
+</html>

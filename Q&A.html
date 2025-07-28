@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Your Car Website</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        #faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+#faq-section h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #f21 ;
+    margin-bottom: 20px;
+}
+
+.faq {
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    background-color: #37488f;
+    color: #fff;
+    font-size: 18px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background-color: #fef2f2;
+    color: #333;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.faq-question.active + .faq-answer {
+    display: block;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            Vintage Velocity </div> 
+    </header>
+
+<section id="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+        <div class="faq-question">
+            <h3> What types of vehicles do you offer?</h3>
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>We offer a diverse selection of vehicles, including new and certified pre-owned cars, trucks, SUVs, and hybrids. You can explore our full inventory on our website.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <div class="faq-question">
+            <h3>Can I schedule a test drive?</h3>
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Absolutely! You can easily schedule a test drive online through our website or by contacting our showroom directly. We recommend booking ahead to ensure your preferred vehicle is available.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-question">
+            <h3>What financing options are available?</h3>
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>We provide a variety of financing solutions, including loans and lease options. Our finance team is here to help you find the best plan that fits your budget and needs.</p>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <div class="faq-question">
+            <h3>Do you accept trade-ins?</h3>
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, we do accept trade-ins! Bring your vehicle in for a complimentary appraisal, and we’ll give you a fair market value that can be applied toward your new purchase.</p>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="faq-question">
+            <h3>Do you provide maintenance services?</h3>
+            <span class="faq-toggle">+</span>
+        </div>
+        <div class="faq-answer">
+            <p>Yes, our service department offers comprehensive maintenance and repair services for all vehicle makes and models. Schedule an appointment online or contact us for assistance.</p>
+        </div>
+    </div>
+
+</section>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+    
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                question.classList.toggle('active');
+    
+                const answer = question.nextElementSibling;
+                if (question.classList.contains('active')) {
+                    question.querySelector('.faq-toggle').textContent = '-';
+                    answer.style.display = 'block';
+                } else {
+                    question.querySelector('.faq-toggle').textContent = '+';
+                    answer.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>

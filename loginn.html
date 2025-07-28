@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            scroll-behavior: smooth;
+            background-image: url('image3.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .header1 {
+            background: linear-gradient(135deg, #660066, #660066);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 28px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .header2 {
+            background: linear-gradient(135deg, #660066,#660066);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .header2 nav {
+            margin-top: 10px;
+        }
+        .header2 nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px;
+            transition: border-bottom 0.3s ease, color 0.3s ease;
+        }
+        .header2 nav a:hover,
+        .header2 nav a.active {
+            border-bottom: 3px solid #fff;
+            color: #ffeb3b;
+        }
+        footer {
+            background: linear-gradient(135deg, #660066, #660066);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .login-container {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            border: 3px solid #013220;
+            text-align: center;
+            margin: 50px auto;
+            position: relative; /* Centered within the page */
+            left: 50%; /* Shift right */
+            transform: translateX(-50%); /* Center it */
+        }
+        .login-container img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 0;
+            color: #007bff;
+            font-size: 26px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: bold;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-group input:focus {
+            border-color: #00c6ff;
+            box-shadow: 0 0 8px rgba(0, 198, 255, 0.4);
+            outline: none;
+        }
+        .form-actions {
+            text-align: center;
+        }
+        .form-actions input[type="reset"] {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            color: #333;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-actions input[type="reset"]:hover {
+            background-color: #ddd;
+        }
+        .form-actions button {
+            background-color: #00c6ff;
+            border: none;
+            color: #fff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .form-actions button:hover {
+            background-color: #009acd;
+            transform: scale(1.05);
+        }
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Login Page</title>
+        <style>
+            /* Your existing styles here... */
+        </style>
+    </head>
+    <body>
+        <header class="header1">
+            Welcome to Our Vintage Car Showroom
+        </header>
+    
+        <header class="header2">
+            <nav>
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About Us</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#service" class="nav-link">Service</a>
+            </nav>
+        </header>
+        
+        <section id="home">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form method="post" action="">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" placeholder="Enter Username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" placeholder="Enter Password" name="password" required>
+                    </div>
+                    <div class="form-actions">
+                        <input type="reset" value="Clear" name="b1">
+                        <a href="tanmay.html"></a>
+                        <button type="submit" name="b2">Login</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    
+        <footer>
+            &copy; 2024 Your Company. All rights reserved.<br>
+            Parel, Mumbai
+        </footer>
+    
+        <script>
+            const navLinks = document.querySelectorAll('.nav-link');
+    
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent the default anchor click behavior
+                    alert("Please log in to access this section.");
+                });
+            });
+    
+            // Existing scroll functionality
+            const sections = document.querySelectorAll('section');
+    
+            function changeNavLink() {
+                let index = sections.length;
+    
+                while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+    
+            changeNavLink();
+            window.addEventListener('scroll', changeNavLink);
+        </script>
+    </body>
+    </html>
+    
